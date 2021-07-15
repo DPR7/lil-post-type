@@ -29,7 +29,7 @@ function lil_register_business_type() {
 
 function lil_register_event_type() {
     $labels = array( 
-        'name' => __( 'Events', LILDOMAIN ),
+        'name' => __( 'event', LILDOMAIN ),
         'singular_name' => __( 'Event', LILDOMAIN ),
         'archives' => __( 'Events Calendar', LILDOMAIN ),
         'add_new' => __( 'Add New Event', LILDOMAIN ),
@@ -39,7 +39,7 @@ function lil_register_event_type() {
     $args = array( 
         'labels' => $labels,
         'public' => true,
-        'has_archive' => 'events',
+        'has_archive' => 'event',
         'rewrite' => array( 'has_front' => true ),
         'menu_icon' => 'dashicons-calendar',
         'supports' => array( 'title', 'editor', 'thumbnail' ),
