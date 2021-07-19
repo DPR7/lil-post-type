@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Twenty_Nineteen
- * @since Twenty Nineteen 1.0
+ * @since 1.0.0
  */
 
 $discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null; ?>
@@ -13,13 +13,13 @@ $discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentyni
 
 <?php if ( ! is_page() ) : ?>
 <div class="entry-meta">
-	
+<?php echo get_the_term_list( get_the_ID(), 'size', '<b>Size:</b> ', ', ', '' ); ?>
 	<?php
-		// Edit post link.
+	// Edit post link.
 		edit_post_link(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Post title. Only visible to screen readers. */
+					/* translators: %s: Name of current post. Only visible to screen readers. */
 					__( 'Edit <span class="screen-reader-text">%s</span>', 'twentynineteen' ),
 					array(
 						'span' => array(
