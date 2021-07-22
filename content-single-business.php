@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Twenty_Nineteen
- * @since Twenty Nineteen 1.0
+ * @since 1.0.0
  */
 
 ?>
@@ -14,17 +14,17 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
 	<header class="entry-header">
-		<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
+		<?php get_template_part( 'template-parts/header/entry-header', 'business' ); ?>
 	</header>
 	<?php endif; ?>
 
 	<div class="entry-content">
 		<?php
-		the_post_thumbnail ( 'large' );
+        the_post_thumbnail( 'large' );
 		the_content(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Post title. Only visible to screen readers. */
+					/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentynineteen' ),
 					array(
 						'span' => array(
@@ -43,6 +43,12 @@
 			)
 		);
 		?>
+
+		<section class="related-events">
+			<h3><?php _e( 'Upcoming Events', 'twentynineteen' ); ?></h3>
+			<?php lil_show_events(); ?>
+		</section>
+		
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
