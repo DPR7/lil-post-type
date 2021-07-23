@@ -11,3 +11,37 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twentynineteenchild
 */
+
+.site-header.featured-image {
+    overflow: hidden;
+    position: relative;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 35%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.related-events {
+	background:#F7F5F5;
+	border: 1px solid #666666;
+	padding: 10px;
+}
+
+ul.events-list {
+	list-style-type: none;
+}
+
+ul.events-list li {
+	border-bottom: 1px solid #CFCFCF;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+ul.events-list li a {
+	font-weight: bold;
+}
+
+ul.events-list li p {
+	margin: 0; 
+	padding: 0;
+}
